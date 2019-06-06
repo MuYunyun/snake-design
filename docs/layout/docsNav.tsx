@@ -19,9 +19,6 @@ export default function DocsNav(props: NavProps) {
   // 渲染左侧导航
   const renderNavList = (list: Array<ComponentProps>) => {
     return list.map((item, index) => {
-      if (item.isDevelopmenting && process.env.NODE_ENV !== 'localdev') {
-        return null
-      }
       return (
         <NavLink key={index} activeClassName="sub-active" to={item.path}>
           {item.name}

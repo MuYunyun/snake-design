@@ -88,5 +88,11 @@ export default [
     name: 'Spin 文字提示',
     path: '/app/basic/spin',
     component: require('../components/Spin').default
+  },
+  {
+    key: 'menu',
+    name: 'Menu 导航菜单',
+    path: '/app/basic/menu',
+    component: require('../components/Menu').default
   }
 ]
