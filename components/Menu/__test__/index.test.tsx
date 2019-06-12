@@ -9,12 +9,12 @@ const SubMenu = Menu.subMenu
 describe('menu test', () => {
   it('snapshot', () => {
     const { container } = render(
-      <menu>
+      <Menu>
         <MenuItem title="菜单项" />
         <SubMenu title="子菜单">
           <MenuItem title="子菜单项" />
         </SubMenu>
-      </menu>
+      </Menu>
     )
     expect(container.innerHTML).toMatchSnapshot()
   })
@@ -23,12 +23,12 @@ describe('menu test', () => {
     function MenuDemo() {
       const [selectedKey, setSelectedKey] = useState('menu1')
       return (
-        <menu selectedKey={selectedKey} onSelect={(key: string) => setSelectedKey(key)}>
+        <Menu selectedKey={selectedKey} onSelect={(key: string) => setSelectedKey(key)}>
           <MenuItem key="menu1" title="菜单项" />
           <SubMenu key="menu2" title="子菜单">
             <MenuItem key="menu3" title="子菜单项" />
           </SubMenu>
-        </menu>
+        </Menu>
       )
     }
 
